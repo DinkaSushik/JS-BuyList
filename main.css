@@ -1,36 +1,138 @@
-body {
-    background-color: lightgrey;
-}
-/*.bl-background {
-    background: #cdcbcb;
-    padding: 20px;
-    margin: 0 auto;
-
-}
-*/
-.bl-list {
-    height: 100px;
-    width: 700px;
-    margin-right: 10px;
-     padding: 5px;
-    border-radius: 3px;
-    background: white;
-     overflow: hidden;
-        /*margin: 0 auto;*/
+body{
+	/*width: 100%;*/
+	background-color: #DADADA;
 }
 
-.bl-bought {
-     width: 300px;
-    height: 100%;
-    float:right;
-     border-radius: 3px;
-    background: white;
+.container{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
 }
 
-/*Кнопки*/
-.bl-label {
-    background: #cdcbcb;
+.container > div{
+	position: absolute;
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: white;
+	border: 1px solid rgba(34,36,38,.15);
+	border-radius: 5px;
 }
-.bl-plus {
-    background: #04a613;
+
+.todo{
+	left: 0;
+	width: calc(100% - 304px);
+}
+
+.todo > div{
+	padding: 10px;
+}
+
+.todo .add input{
+	width: 79%;
+	border: 1px solid #DADADA;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.todo .add button{
+	background-color: blue;
+	color: white;
+	width: 20%;
+	border: 1px solid darkblue;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0;
+}
+.todo .add button:active{
+	background-color: darkblue;
+}
+
+
+.todo .list .item{
+	border-top: 1px solid #DADADA;
+}
+
+.todo .list .item > div {
+	display: inline-block;
+	width: calc(33% - 0.5px);
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.todo .list .item .item-count{
+	text-align: center;
+}
+
+.todo .list .item .item-count .item-count-minus{
+	border: 1px solid limegreen;
+	border-radius: 50%;
+	background-color: lightgreen;
+	padding: 5px;
+}
+.todo .list .item .item-count .item-count-minus:active{
+	background-color: limegreen;
+}
+
+.todo .list .item .item-count .item-count-current{
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	background-color: #DADADA;
+	padding: 5px 10px;
+}
+
+.todo .list .item .item-count .item-count-plus{
+	border: 1px solid red;
+	border-radius: 50%;
+	background-color: orangered;
+	padding: 5px;
+}
+.todo .list .item .item-count .item-count-plus:active{
+	background-color: red;
+}
+
+.todo .list .item .item-control{
+	text-align: right;
+}
+
+.todo .list .item .item-control .item-control-buy{
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.todo .list .item .item-control .item-control-remove{
+	border: 1px solid red;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: orangered;
+}
+
+.stats{
+	right: 0;
+	width: 300px;
+}
+
+.stats .row{
+	padding: 10px;
+	border-bottom: 1px solid #DADADA;
+}
+
+.stats .row h3{
+	margin: 0;
+}
+
+.stats .row .item{
+	border-radius: 5px;
+	background-color: #DADADA;
+	padding: 5px;
+	margin-right: 5px;
+}
+
+.stats .row .item .item-count{
+	border-radius: 50%;
+	background-color: #F2711C;
+	color: white;
+	padding: 5px;
 }
