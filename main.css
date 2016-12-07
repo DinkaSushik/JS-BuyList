@@ -15,11 +15,13 @@ body {
      padding: 5px;
     border-radius: 3px;
     background: white;
-        margin: 0 auto;
+     overflow: hidden;
+        /*margin: 0 auto;*/
 }
 
 .bl-bought {
      width: 300px;
+    height: 100%;
     float:right;
      border-radius: 3px;
     background: white;
