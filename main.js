@@ -6,13 +6,37 @@ $(function() {
     var lIST=$(".bl-list");
     var lIST_TITLE=$(".bl-bought-temp");
     var lIST_TITLED=$(".bl-boughted-temp");
-    var number;
-   
+    var number= 1;
+    $(".bl-add").click(function() {
+       var input = $(".bl-input");
+       var value = input.val();
+       console.log(" input val " ,value);
+       addItem(value);
     });
 
     
     function addItem(title) {
+        if(title){
+           var node =$(ITEM_TEMPLATE);
+           var nodeTit=$(ITEM_TITLE);
+           var nodeTited=$(ITEM_TITLED);
+           node.fadeOut(250,	function(){
+           $(node).find(".bl-product").text(title);
+           $(node).find(".bl-label").text(number);
+           $(nodeTit).find(".bl-storage").text(title);
+           $(nodeTit).find(".bl-buyProd").text(number);
+                node.fadeIn(250);
+           });
+           node.find(".bl-buttonsDel").click(function(){ //видалення продукта
+               node.fadeOut(250,	function(){
+               node.remove();
+               nodeTit.remove();
+                   
+                   node.fadeIn(250);
+           });
+           });
     }
+    
  
 
     addItem("Печиво");
