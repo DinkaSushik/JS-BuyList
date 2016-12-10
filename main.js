@@ -36,6 +36,17 @@ $(function() {
            });
            });
     }
+        відніманя кількості продукта
+                node.find(".bl-label").fadeOut(250,	function(){
+               var numberOfProduct = parseInt(node.find(".bl-label").text(),10);
+               if(parseInt(node.find(".bl-label").text(),10)>1){
+                   node.find(".bl-label").text(parseInt(node.find(".bl-label").text(),10)-1);
+                   nodeTit.find(".bl-buyProd").text(numberOfProduct-1);
+               }if(parseInt(node.find(".bl-label").text(),10)<2){
+                   node.find(".bl-mines").css("background-color","pink");
+               }
+                     node.find(".bl-label").fadeIn(250);
+           });
     
  
 
